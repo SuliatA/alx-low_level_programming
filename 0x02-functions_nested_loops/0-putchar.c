@@ -1,6 +1,11 @@
 #include <studio.h>
 
-int main()
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
 {
 	for ( char c = 'A'; c <= 'Z'; c++ )
 
