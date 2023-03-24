@@ -11,14 +11,27 @@
 */
 
 void print_remaining_days(int month, int day, int year)
-{
-	printf("2000- ");
-	scanf("%d", &year);
+{	
+	if (year % 4 == 0 || (year % 400 == 0 && year % 100 == 0))
+	{
+		if (month >= 2 && day >= 60)
+		{
+			day++;
+		}
 
-	if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0))
-		printf("%d is a leap year.", year);
+		printf("Day of the year: %d\n", day);
+		printf("Remaining days: %d\n", 366 - day);
+	}
 	else
-		printf("%d is not a leap year.", year);
-
-	return = 0;
+	{
+		if (month == 2 && day == 60)
+		{
+			printf("Invalid date: %02d/%02d/%04d\n", month, day - 31, year);
+		}
+		else
+		{
+			printf("Day of the year: %d\n", day);
+			printf("Remaining days: %d\n", 365 - day);
+		}
+	}
 }
