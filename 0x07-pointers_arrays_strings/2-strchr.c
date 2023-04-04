@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * _strch -  function that locates a character in a string
+ * _strchr - function that locates a character in a string
  * @c: char to be located
  * @s: memory area to be searched
  * Return: pointer to the first occurrence of the character c in the string s
